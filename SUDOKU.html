@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sudoku</title>
+    <script src="../Jquery Day1/jquery-3.1.1.js"></script>
+    <script src="SUDOKU.js"></script>
+    <style media="screen">
+        #mainWrapper {
+            margin: 20px;
+            text-align: center;
+        }
+
+        #timer {
+            font-weight: bolder;
+            font-size: 40px;
+            text-align: center;
+            background-color: turquoise;
+            width: -moz-fit-content;
+            margin: auto;
+            border-radius: 20px;
+            padding: 10px;
+        }
+
+        table {
+            border: 10px solid darkcyan;
+            border-radius: 30px;
+            margin: auto;
+            padding: 10px;
+        }
+
+        td {
+            border: 5px solid rgb(55, 148, 177);
+            text-align: center;
+            border-radius: 20px;
+            font-size: 20px;
+            font-weight: bolder;
+            padding: 25px;
+        }
+
+        #temporary {
+            background-color: dimgrey;
+            text-align: center;
+            padding: 30px;
+            display: block;
+            border: 10px solid darkcyan;
+            border-radius: 50px;
+            color: floralwhite;
+            position: fixed;
+            top: 20%;
+            left: 30%;
+            width: 30%;
+        }
+
+        #gameEnd {
+            background-color: dimgrey;
+            text-align: center;
+            padding: 30px;
+            display: table;
+            border: 10px solid darkcyan;
+            color: floralwhite;
+            border-radius: 50px;
+            position: fixed;
+            top: 30%;
+            left: 37%;
+            width: 20%;
+        }
+
+        #temporary p,
+        #gameEnd p {
+            display: block;
+            font-weight: bolder;
+            font-family: cursive;
+        }
+
+        #temporary p:nth-of-type(2),
+        #temporary p:nth-of-type(3){
+            color: #3f1965;
+            font-size: 20px;
+        }
+
+        .current {
+            border: 5px dashed rgb(255, 178, 6);
+        }
+
+        .locked {
+            background-color: rgb(55, 148, 177);
+        }
+    </style>
+</head>
+
+<body>
+    <section id="mainWrapper">
+        <p id="timer">
+        </p>
+        <table id="gameTable">
+        </table>
+    </section>
+    <div id='temporary'>
+        <p>"Welcome to SUDOKU Game"</p>
+        <br>
+        <p>Choose Level</p>
+        <select id="levelSelection" name="level">
+            <option value="1">Easy</option>
+            <option value="2">Medium</option>
+            <option value="3">Hard</option>
+            <option value="4">Expert</option>
+        </select>
+        <p>Timer</p>
+        <select id="timerSet" name="timerSet">
+            <option value="1">ON</option>
+            <option value="0">OFF</option>
+        </select>
+        <br>
+        <br>
+        <input type="button" id="startBtn" name="start" value="start Game">
+    </div>
+    <div id="gameEnd">
+        <p>Game End</p>
+        <input type="button" name="replay" value="Replay">
+        <input type="button" name="exit" value="Exit Game">
+    </div>
+</body>
+
+</html>
