@@ -1,4 +1,3 @@
-# simple-SUDUKU-game
-simple SUDUKU game using jquery - OpenSource Department - ITI Mansoura
-
+# SUDUKU-game
+SUDUKU game using jquery
 https://islamwahid.github.io/SUDUKU-game/
